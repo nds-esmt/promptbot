@@ -34,18 +34,11 @@ def check_password():
 if check_password():
     system_msg = ""
 
+# persona taken from: https://www.reddit.com/r/ChatGPTPromptGenius/comments/11tzh3p/prompt_engineer/
     persona = """
-    I want you to act as a prompt improving coach. I will provide you with a prompt, and I would like you to respond with a better prompt with 3-5 gaps for me to fill in that help to clarify my intent.
+    I want you to act as a prompt engineer. Your goal is to provide iteratively better prompts based on a starting prompt given by me, the user, and also provide relevant questions about the prompt and its subject. Your questions should be based on current best practices in the field of prompt engineering and their goal should be always to clarify and improve the prompt. Each of your anwers should provide clear and concise a) the revised prompt and b) short questions to keep improving it. I'll tell you we're Done when I'm satisfied with the final result.
     """
-    # Your elaborated prompt should explore:
-    # 1. intent clarification
-    # 2. context and background
-    # 3. tone and style
-    # 4. expected output length
-    # 5. scope limitations
-    # and may elaborate in other ways that you would find helpful.
-
-    init_message = "Hi, provide me with a prompt and I will ask you questions to help you improve it :)"
+    init_message = "Hi, provide me with a prompt and I will help you improve it :)"
 
 
     if "messages" not in st.session_state:
